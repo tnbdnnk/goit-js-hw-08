@@ -18,7 +18,7 @@ formEl.addEventListener('input', throttle(storeData, 500))
 formEl.addEventListener('submit', clearData);
 
 function storeData(e){
-    feedbackData[e.target.name]= evt.target.value;
+    feedbackData[e.target.name]  = e.target.value;
     localStorage.setItem(USER_FORM_DATA, JSON.stringify(feedbackData));
 };
 function setInputValueFromStorage(){
